@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>substring</title>
+</head>
+<body>
+	<script>
+		var cumle = "My name is Sung Jın Woo <br/>";
+		var result = cumle.substring(10,15);//substring:(start, red).
+		//belirtilen indexler arasındaki değerleri alır.
+		document.write(result+"<br/>");
+		var result2 = cumle.substr(8,4);//substr:(start, length).
+		//başlangıç indexlerden başlayarak.
+		// belirtilen sayıda karakter alın.
+		document.write(result2+"<br/>");
+		var result3 = cumle.includes("is");//belirtilen değeri içerip içermediğini söyler.
+		document.write(result3+"<br/>");
+		var result4 = cumle.search("Sung");
+		document.write(result4+"<br/>");
+		var result5 = cumle.search(/sung/i);//büyük küçük harfe dikkat etmeden arama.
+		document.write(result5+"<br/>");
+		var result6 = cumle.repeat(10);
+		document.write(result6+"<br/>");
+		var result7 = cumle.replace("Sung Jın Woo", "Igrıs");//cümlede belli bir kısmı değiştirmeye yarar.
+		document.write(result7+"<br/>");
+		result8 = cumle.link("https://tempestscans.net/solo-leveling-0-prolog/");
+		document.write(result8+"<br/>");
+		var result9 = cumle.startsWith("M");//cümle verilen harfle mi başlıyor sorusuna "true","false" cevabını verir.
+		document.write(result9+"<br/>");
+		var result10 = cumle.endsWith("a")//cümle verilen harfle mi bitiyor sorusuna "true","false" cevabını verir.
+		document.write(result10+"<br/>");
+		var result11 = cumle.toUpperCase();//tüm metni büyük harf yapar.
+		document.write(result11+"<br/>");
+		var result12 = cumle.toLowerCase();//tüm metni küçük haf yapar.
+		document.write(result12+"<br/>");
+	</script>
+</body>
+</html>

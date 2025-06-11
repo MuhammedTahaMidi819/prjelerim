@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Fotoğraf Galerisi</title>
+  <style>
+    body{
+      background-color: orange;
+    }
+    #galeri{
+      position: relative;
+      width: 300px;
+      height: 200px;
+      margin-bottom: 10px;
+    }
+
+    img{
+      width: 300px;
+      height: 200px;
+      position: absolute;
+      left: 0px;
+      right: 0px;
+    }
+  </style>
+</head>
+<body>
+  <div id="galeri">
+    <img src="D:\İndirilenler\hobi1.jpg" id="resim1">
+    <img src="D:\İndirilenler\hobi2.jpg" id="resim2">
+    <img src="D:\İndirilenler\hobi3.jpg" id="resim3">
+  </div>
+  <div>
+    <input type="button" onmousemove="resmiGoster1()" value="resim1">
+    <input type="button" onmousemove="resmiGoster2()" value="resim2">
+    <input type="button" onmousemove="resmiGoster3()" value="resim3">
+  </div>
+<script>
+  function resmiGoster1(){
+    document.getElementById("resim1").style.zIndex=2;
+    document.getElementById("resim2").style.zIndex=1;
+    document.getElementById("resim3").style.zIndex=1;
+  }
+  function resmiGoster2(){
+    document.getElementById("resim1").style.zIndex=1;
+    document.getElementById("resim2").style.zIndex=2;
+    document.getElementById("resim3").style.zIndex=1;
+  }
+  function resmiGoster3(){
+    document.getElementById("resim1").style.zIndex=1;
+    document.getElementById("resim2").style.zIndex=1;
+    document.getElementById("resim3").style.zIndex=2;
+  }
+</script>
+</body>
+</html>

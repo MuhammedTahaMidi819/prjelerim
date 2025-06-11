@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Gece Gündüz Modu</title>
+</head>
+<body>
+
+  <button type="button" onclick="darkMode()">Gece Modu</button>
+  <button type="button" onclick="lightMode()">Gündüz Modu</button>
+  <script>
+    function darkMode(){
+      document.getElementsByTagName("body")[0].style.color="bisque";
+      document.getElementsByTagName("body")[0].style.backgroundColor="gray";
+    }
+    function lightMode(){
+      document.getElementsByTagName("body")[0].style.color="gray";
+      document.getElementsByTagName("body")[0].style.backgroundColor="bisque";
+    } 
+  </script>
+</body>
+</html>

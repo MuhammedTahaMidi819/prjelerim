@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>proje1</title>
+</head>
+<body>
+  <div style="background-color: gray;">
+    <form>
+      Web Sayfasını <b>koyu</b> modda kullanmak ister misin?<br>
+      <input type="radio" name="mod" id="evet">Evet<br>
+      <input type="radio" name="mod" id="hayır">Hayır<br>
+      <input type="button" value="Mod Ayarla" onclick="modDegis()">
+    </form>
+  </div>
+  <script>
+    function modDegis(){
+      if(document.getElementById("evet").checked==true){
+        document.getElementsByTagName("body")[0].style.backgroundColor="black";
+        document.getElementsByTagName("body")[0].style.color="white";
+      }
+      else{
+        document.getElementsByTagName("body")[0].style.backgroundColor="white";
+        document.getElementsByTagName("body")[0].style.color="black";
+      }
+    }
+  </script>
+</body>
+</html>
