@@ -179,20 +179,41 @@ Seni çok seviyorum.
       <p>Made with 💜 by kocan :3 — <span class="tiny">Bu site sadece bebişim içindir.</span></p>
     </div>
   </footer>
-
   <script>
-    const target = new Date('2025-09-08T00:00:00+03:00');
-    const d = document.getElementById('d');
-    const h = document.getElementById('h');
-    const m = document.getElementById('m');
-    const s = document.getElementById('s');
+  // ==== 8 EYLÜL GERİ SAYIMI ====
+  const target = new Date('2025-09-08T00:00:00+03:00').getTime();
+  const d = document.getElementById('d');
+  const h = document.getElementById('h');
+  const m = document.getElementById('m');
+  const s = document.getElementById('s');
 
-    function tick(){
-      const now = new Date();
-      const diff = target - now;
-      d.textContent = String
-      }
-      </script>
+  function tick() {
+    const now = new Date().getTime();
+    const diff = target - now;
+
+    if (diff <= 0) {
+      d.innerText = '00';
+      h.innerText = '00';
+      m.innerText = '00';
+      s.innerText = '00';
+      clearInterval(interval);
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    d.innerText = days.toString().padStart(2, '0');
+    h.innerText = hours.toString().padStart(2, '0');
+    m.innerText = minutes.toString().padStart(2, '0');
+    s.innerText = seconds.toString().padStart(2, '0');
+  }
+
+  const interval = setInterval(tick, 1000);
+  tick(); // Sayfa yüklendiğinde hemen çalışması için
+</script>
+
       </body>
       </html>
-
